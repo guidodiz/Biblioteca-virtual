@@ -1,0 +1,15 @@
+{% extends 'web/base.html'}
+
+{% block title %} Formulario {% endblock %}
+
+{% block extra_css %} {% endblock %}
+
+{% block main %}
+
+<form action="{% url 'forms' %}" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}
